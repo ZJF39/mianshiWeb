@@ -1,7 +1,7 @@
 # 公共配置文件
 spring:
   application:
-    name: springboot-init
+    name: mianshiWeb
   # 默认 dev 环境
   profiles:
     active: dev
@@ -16,12 +16,14 @@ spring:
     # 30 天过期
     timeout: 2592000
   # 数据库配置
+  # todo 修改数据库配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/temp_db
+    url: jdbc:mysql://localhost:3306/mianshi_db
     username: root
     password: root
     # Redis 配置
+    # todo 修改redis配置
     redis:
       database: 1
       host: localhost
@@ -74,4 +76,4 @@ knife4j:
       default:
         api-rule: package
         api-rule-resources:
-          - cn.edu.hit.springbootinit.controller
+          - cn.edu.hit.mianshiWeb.controller
